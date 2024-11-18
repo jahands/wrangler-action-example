@@ -3,7 +3,13 @@
 Run the following to repro this issue:
 
 ```shell
+# clone and checkout branch
+git clone https://github.com/jahands/wrangler-action-example.git
+git switch bulk-put-repro
+
+# install deps
 pnpm install
+
 # create the worker with a text binding "MY_VAR"
 pnpm wrangler deploy
 
