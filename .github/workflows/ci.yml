@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    env:
+      APP_SECRET1: 'some-secret-value1'
+      APP_SECRET2: 'some-secret-value2'
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -21,3 +24,6 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          secrets: |
+            APP_SECRET1
+            APP_SECRET2
