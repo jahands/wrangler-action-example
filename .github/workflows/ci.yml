@@ -2,6 +2,7 @@ name: Trigger Deploy.yml
 
 jobs:
   trigger-deploy:
+    if: github.repository == 'jahands/wrangler-action-example'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
