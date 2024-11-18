@@ -4,6 +4,7 @@ jobs:
   trigger-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Trigger deploy.yml
         run: |
           gh workflow run deploy.yml
