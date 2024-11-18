@@ -9,8 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
-    env:
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
