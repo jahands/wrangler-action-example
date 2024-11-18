@@ -1,5 +1,5 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "wrangler-action-example"
+name = "wrangler-action-example-2"
 account_id = "f9b1e1e2cf50cca79a58e395b6084239"
 main = "src/index.ts"
 compatibility_date = "2024-11-12"
