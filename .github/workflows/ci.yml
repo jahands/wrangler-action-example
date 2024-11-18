@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: 22.x
           cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
       - name: Deploy
         uses: cloudflare/wrangler-action@jahands/secrets
         with:
