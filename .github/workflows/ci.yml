@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Trigger deploy.yml
         run: |
-          gh workflow run deploy.yml
+          gh workflow run deploy.yml --ref dispatch-test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
